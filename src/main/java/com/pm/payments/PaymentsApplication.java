@@ -45,7 +45,7 @@ public class PaymentsApplication implements ApplicationListener<ApplicationReady
 	}
 	private static String getBanner() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("###############################################\n");
+		sb.append("################################################\n");
 		sb.append("#### "+Emoji.HEART_BLUE+"PAYMENT SERVICES BACKEND "+Emoji.HEART_BLUE+"   ####\n");
 		sb.append("#### ".concat(Emoji.FLOWER_RED).concat(" ").concat(new DateTime().toDateTimeISO().toString().concat("     ####\n")));
 		sb.append("###############################################\n");
@@ -55,7 +55,7 @@ public class PaymentsApplication implements ApplicationListener<ApplicationReady
 	@Override
 	public void onApplicationEvent(ApplicationReadyEvent event) {
 		LOGGER.info("\uD83C\uDF3C \uD83C\uDF3C onApplicationEvent: " +
-				"ApplicationReadyEvent fired: \uD83C\uDF3C \uD83C\uDF3C app is ready to initialize whatever it needs .... ");
+				"ApplicationReadyEvent has been fired: \uD83C\uDF3C \uD83C\uDF3C app is ready to initialize whatever it needs .... ");
 
 		Calendar cal = Calendar.getInstance();
 		int res = cal.getActualMaximum(Calendar.DATE);
