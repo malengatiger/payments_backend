@@ -17,6 +17,7 @@ public class EndpointsListener {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(EndpointsListener.class);
     int cnt = 0, mCount = 0;
+
     @EventListener
     public void handleContextRefresh(ContextRefreshedEvent event) {
         ApplicationContext applicationContext = event.getApplicationContext();
@@ -38,7 +39,6 @@ public class EndpointsListener {
                             other.add(key.toString().concat(" ").concat(value.toString()));
                         }
                     }
-//            LOGGER.info("\uD83C\uDF45 Anchor ENDPOINT #"+cnt+" \uD83C\uDF45 {} {}", key, value);
         });
         cnt = 0;
         LOGGER.info(Emoji.FLOWER_YELLOW.concat("POST endpoints ..... ").concat(" : " + posts.size() + " ").concat(Emoji.FLOWER_YELLOW));
